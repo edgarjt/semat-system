@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>amCharts examples</title>
+       
+        <script src="../amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="../amcharts/funnel.js" type="text/javascript"></script>
+        <script>
+
+            var chart2;
+            var data2 = [
+                {
+                    "title": "Website visits",
+                    "value": 200
+                },
+                {
+                    "title": "Downloads",
+                    "value": 123
+                },
+                {
+                    "title": "Requested price list",
+                    "value": 98
+                },
+                {
+                    "title": "Contaced for more info",
+                    "value": 72
+                },
+                {
+                    "title": "Purchased",
+                    "value": 65
+                },
+                {
+                    "title": "Contacted for support",
+                    "value": 45
+                },
+                {
+                    "title": "Purchased additional products",
+                    "value": 1360
+                }
+			];
+
+            AmCharts.ready(function () {
+
+                chart2 = new AmCharts.AmFunnelChart();
+                chart2.rotate = true;
+                chart2.titleField = "title";
+                chart2.balloon.fixedPosition = true;
+                chart2.marginRight = 210;
+                chart2.marginLeft = 15;
+                chart2.labelPosition = "right";
+                chart2.funnelAlpha = 0.9;
+                chart2.valueField = "value";
+                chart2.startX = -500;
+                chart2.dataProvider = data2;
+                chart2.startAlpha = 0;
+                chart2.depth3D = 100;
+                chart2.angle = 30;
+                chart2.outlineAlpha = 1;
+                chart2.outlineThickness = 2;
+                chart2.outlineColor = "#FFFFFF";
+                chart2.write("chartdiv2");
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="chartdiv2" style="width: 700px; height: 500px;"></div>
+    </body>
+
+</html>
