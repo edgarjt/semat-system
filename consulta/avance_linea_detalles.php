@@ -364,7 +364,7 @@ include_once("../library/Componente_P2V2.php");
     <script src="../js/graficas/amcharts/themes/light.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=
 AIzaSyD0jULw6KYXZl0YSsLBABqdsy_gcDUU1IY
-&signed_in=true&callback=initMap"></script>
+&callback=initMap"></script>
     <script type="text/javascript">
                   function cambiacolor_over(celda){ celda.style.backgroundColor="#F5BCA9" } 
                   function cambiacolor_out(celda){ celda.style.backgroundColor="#ffffff" }

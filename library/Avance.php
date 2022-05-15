@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-include_once 'Database.php';
+//include_once 'Database.php';
 
 class Avance{
     
