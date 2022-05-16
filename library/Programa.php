@@ -378,8 +378,6 @@ class Programa{
                 $tamanio_marker = 15 ;
                 $indicaciones = '' ;
                 $sql_indicacion = "select max(indicacion.porcentaje_perdida) as porcentaje, tipo_indicacion.descripcion as indicacion, indicacion.espesor_remanente as remanente, indicacion.fecha_inspeccion as fecha from indicacion join tipo_indicacion on tipo_indicacion.id_tipo_indicacion = indicacion.id_tipo_indicacion where id_programa = " . $row['id_programa'] ;
-                //var_dump($sql_indicacion);
-                //return;
                 $resultado_indicacion = $this->conexion->query($sql_indicacion);
                 if($resultado_indicacion->num_rows > 0){
 
