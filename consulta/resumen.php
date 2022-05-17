@@ -376,7 +376,7 @@ if(isset($_POST['subdireccion']) && isset($_POST['contrato']) && isset($_POST['t
                                         <strong>
                                             <center>
                                                 <?php 
-                                                $temp = number_format ($indicacion->getIndicacionesDuctoCount($value,'VT',$_POST['contrato'], $_POST['tipo_trabajo'], $_POST['compania'])) ;
+                                                $temp = date ($indicacion->getIndicacionesDuctoCount($value,'VT',$_POST['contrato'], $_POST['tipo_trabajo'], $_POST['compania'])) ;
                                                 echo $temp ;
                                                 $arreglo_totales_lineas[$contador_provisional++] += $temp ;
                                                 ?>
@@ -387,7 +387,7 @@ if(isset($_POST['subdireccion']) && isset($_POST['contrato']) && isset($_POST['t
                                         <strong>
                                             <center>
                                                 <?php
-                                                $temp = number_format ($indicacion->getIndicacionesDuctoCount($value,'UT',$_POST['contrato'], $_POST['tipo_trabajo'], $_POST['compania'])) ;
+                                                $temp = date($indicacion->getIndicacionesDuctoCount($value,'UT',$_POST['contrato'], $_POST['tipo_trabajo'], $_POST['compania'])) ;
                                                 echo $temp ;
                                                 $arreglo_totales_lineas[$contador_provisional++] += $temp ;
                                                 ?>
@@ -398,7 +398,7 @@ if(isset($_POST['subdireccion']) && isset($_POST['contrato']) && isset($_POST['t
                                         <strong>
                                             <center>
                                                 <?php
-                                                $temp = number_format ($indicacion->getIndicacionesDuctoCount2($value,$_POST['contrato'], $_POST['tipo_trabajo'], $_POST['compania'])) ;
+                                                $temp = date ($indicacion->getIndicacionesDuctoCount2($value,$_POST['contrato'], $_POST['tipo_trabajo'], $_POST['compania'])) ;
                                                 echo $temp ;
                                                 $arreglo_totales_lineas[$contador_provisional++] += $temp ;
                                                 ?>
