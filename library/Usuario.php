@@ -14,7 +14,9 @@ class Usuario{
     
     private $tabla ;
     private $conexion ;
-                function __construct(){
+
+    function __construct()
+    {
         $ob = new Database();
         $this->conexion = $ob->getConexion();
         $this->tabla = "usuario" ;
@@ -36,24 +38,24 @@ class Usuario{
     
     function update($usuario){
         $sql = "UPDATE $this->tabla SET "
-                . " NOMBRE = '" . $usuario['nombre'] . "',"
-                . " LOGIN = '" . $usuario['login'] . "',"
-                . " PASSWORD = '" . $usuario['password'] . "',"
-                . " TIPO_USUARIO = '" . $usuario['tipo_usuario'] . "',"
-                . " ESTATUS = '" . $usuario['estatus'] . "'" 
-                . " WHERE ID_USUARIO = " . $usuario['id_usuario'] ;
+                . " nombre = '" . $usuario['nombre'] . "',"
+                . " login = '" . $usuario['login'] . "',"
+                . " password = '" . $usuario['password'] . "',"
+                . " tipo_usuario = '" . $usuario['tipo_usuario'] . "',"
+                . " estatus = '" . $usuario['estatus'] . "'"
+                . " WHERE id_usuario = " . $usuario['id_usuario'] ;
         return $this->conexion->query($sql);
     }
     
     function delete($usuario){
         $sql = "UPDATE $this->tabla SET "
-            . " ESTATUS = '" . $usuario['estatus'] ."'" 
-            . " WHERE ID_USUARIO = " . $usuario['id_usuario'] ;
+            . " estatus = '" . $usuario['estatus'] ."'"
+            . " WHERE id_usuario = " . $usuario['id_usuario'] ;
         return $this->conexion->query($sql);
     }
     
     function loadById( $usuario ){
-        $sql = "SELECT * FROM $this->tabla WHERE ID_USUARIO = $usuario " ;
+        $sql = "SELECT * FROM $this->tabla WHERE id_usuario = $usuario " ;
         $resultado = $this->conexion->query($sql) ;
         if($resultado->num_rows > 0) {
             $row = $resultado->fetch_assoc();
@@ -71,7 +73,7 @@ class Usuario{
     }
 
     function loadForLogin($usuario_login, $password_login){
-        $sql = "SELECT * FROM $this->tabla WHERE LOGIN = '".$usuario_login ."' AND PASSWORD = '".$password_login."' AND ESTATUS ='ACTIVO' "  ;
+        $sql = "SELECT * FROM $this->tabla WHERE login = '".$usuario_login ."' AND password = '".$password_login."' AND estatus ='ACTIVO' "  ;
         $resultado = $this->conexion->query($sql) ;
         if($resultado->num_rows > 0) {
             $row = $resultado->fetch_assoc();
