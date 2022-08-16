@@ -2,10 +2,9 @@
 session_start();
 if (!empty($_SESSION)) {
     if (isset($_SESSION['id_usuario'])) {
-        include_once("../library/Database.php");
         include_once("../library/Componente_P1V2.php");
         include_once("../library/Contrato.php");
-        include_once("../Library/Linea.php");
+        include_once("../library/Linea.php");
 
         $contrato = new Contrato();
         $linea = new Linea();
