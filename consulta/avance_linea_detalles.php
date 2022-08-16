@@ -2,15 +2,15 @@
 session_start();
 if(!empty($_SESSION)){
 if(isset($_SESSION['id_usuario']) ){
-      include_once("../Library/Ddv.php");
-      include_once("../Library/Contrato.php");
-      include_once("../Library/Consulta.php");
-      include_once("../Library/TipoTrabajo.php");
-      include_once("../Library/Indicacion.php");
-      include_once("../Library/TipoIndicacion.php");
-      include_once("../Library/Linea.php");
-      include_once("../Library/Programa.php");
-      include_once("../Library/OrdenServicio.php");
+      include_once("../library/Ddv.php");
+      include_once("../library/Contrato.php");
+      include_once("../library/Consulta.php");
+      include_once("../library/TipoTrabajo.php");
+      include_once("../library/Indicacion.php");
+      include_once("../library/TipoIndicacion.php");
+      include_once("../library/Linea.php");
+      include_once("../library/Programa.php");
+      include_once("../library/OrdenServicio.php");
       include_once("../library/Componente_P1V2.php");
 
       $ddv              = new Ddv();
