@@ -71,7 +71,7 @@
                 </li>
 
                 <li>
-                    <a href="index.php">
+                    <a href="logouth.php">
                         <i class="fa fa-sign-out"></i> Login
                     </a>
                 </li>

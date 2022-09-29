@@ -1,7 +1,8 @@
 
 <?php
-session_start() ;
-if(isset($_SESSION['id_usuario']) ){
+session_start();
+
+if($_SESSION['status_session']){
 include_once("library/Componente_P1.php");
 ?>
  <div>
@@ -132,5 +133,7 @@ include_once("library/Componente_P1.php");
     </div>
 <?php
 include_once("library/Componente_P2.php");
-}//if(isset($_SESSION['id_usuario'])) {
+}else {
+    header("Location: index.php");
+}
 ?>
